@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://Dvel.org/2016/hexo-aliyunoss-ipic/</loc>
+    <lastmod>2016-12-05T03:52:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>为Hexo博客弄一个图床，再搭配一个神器</title>
+        <pubTime>2016-11-27T18:17:30.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>图床</tag>
+         
+        <tag>iPic</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://Dvel.org/2016/Nginx-404/</loc>
     <lastmod>2016-11-28T01:30:53.000Z</lastmod>
     <data>
@@ -38,25 +59,4 @@
 
     
     
-    
-  <url>
-    <loc>http://Dvel.org/2016/hexo-aliyunoss-ipic/</loc>
-    <lastmod>2016-11-27T19:06:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>为Hexo博客弄一个图床，再搭配一个神器</title>
-        <pubTime>2016-11-27T18:17:30.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>图床</tag>
-         
-        <tag>iPic</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
