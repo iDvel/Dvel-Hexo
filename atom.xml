@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Dvel.org/"/>
-  <updated>2017-01-07T12:39:10.000Z</updated>
+  <updated>2017-01-07T15:01:55.000Z</updated>
   <id>http://Dvel.org/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>为Hexo博客弄一个图床，再搭配一个神器</title>
-    <link href="http://Dvel.org/p/2.html"/>
-    <id>http://Dvel.org/p/2.html</id>
+    <link href="http://Dvel.org/p/1.html"/>
+    <id>http://Dvel.org/p/1.html</id>
     <published>2016-11-27T18:17:30.000Z</published>
-    <updated>2017-01-07T12:39:10.000Z</updated>
+    <updated>2017-01-07T15:01:55.000Z</updated>
     
     <content type="html"><![CDATA[<p>图床的优点：一次上传，到处使用。</p>
 <p>Markdown编辑器、自己的博客、论坛、Quiver这类的笔记本里，看图都是简单明了的。</p>
@@ -60,10 +60,10 @@
   
   <entry>
     <title>你好, Hexo!</title>
-    <link href="http://Dvel.org/p/1.html"/>
-    <id>http://Dvel.org/p/1.html</id>
+    <link href="http://Dvel.org/p/0.html"/>
+    <id>http://Dvel.org/p/0.html</id>
     <published>2016-11-26T16:48:36.000Z</published>
-    <updated>2017-01-07T12:38:58.000Z</updated>
+    <updated>2017-01-07T15:01:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>因为之前的WordPress博客被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。</p>
 <p>主要还是记录了自己的搭建过程，因为对Linux不太熟悉，以备忘为主。</p>
