@@ -86,31 +86,49 @@
 
 
 
-<meta name="description" content="首先因为Hexo管理图片有些费劲，而且还吃流量，毕竟图床的流量要便宜点。。。
-其次是这样书写的时候，无论在本地的Markdown编辑器，还是网站，亦或是扔到Quiver这类的笔记本里，看图都是简单明了的。
-图床这个没什么说的了，选择很多，教程也很多，只不过七牛要备案呐。
-新浪的也很好，不过自己买的图床管理方便些。
-所以挑了挑我选了阿里云对象存储OSS，不过绑定域名的话，这个域名要备案的，所以我没绑">
+<meta name="description" content="图床的优点：一次上传，到处使用。
+Markdown编辑器、自己的博客、论坛、Quiver这类的笔记本里，看图都是简单明了的。
+图床七牛、又拍、阿里云
+新浪、imgur、sm.ms
+很多随便选，按需求决定，我用的V2EX的，因为我图片量不大。
+图床神器 iPic在选择好图床后，还发现一个超级好用的软件——
+
+总之就是搭配Markdown的神器啦。
+
+支持拖动上传
+自动生成Markdown语法，插图方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为Hexo博客弄一个图床，再搭配一个神器">
 <meta property="og:url" content="http://Dvel.org/2016/为Hexo博客弄一个图床，再搭配一个神器/index.html">
 <meta property="og:site_name" content="Dvel's Blog">
-<meta property="og:description" content="首先因为Hexo管理图片有些费劲，而且还吃流量，毕竟图床的流量要便宜点。。。
-其次是这样书写的时候，无论在本地的Markdown编辑器，还是网站，亦或是扔到Quiver这类的笔记本里，看图都是简单明了的。
-图床这个没什么说的了，选择很多，教程也很多，只不过七牛要备案呐。
-新浪的也很好，不过自己买的图床管理方便些。
-所以挑了挑我选了阿里云对象存储OSS，不过绑定域名的话，这个域名要备案的，所以我没绑">
-<meta property="og:image" content="http://dvel.oss-cn-beijing.aliyuncs.com/2016-11-27-190538.jpg">
-<meta property="og:image" content="http://dvel.oss-cn-beijing.aliyuncs.com/2016-11-27-65e4f1e6gw1f9yve3ycosg20ha0c0k3l.gif">
-<meta property="og:updated_time" content="2016-12-05T03:52:38.000Z">
+<meta property="og:description" content="图床的优点：一次上传，到处使用。
+Markdown编辑器、自己的博客、论坛、Quiver这类的笔记本里，看图都是简单明了的。
+图床七牛、又拍、阿里云
+新浪、imgur、sm.ms
+很多随便选，按需求决定，我用的V2EX的，因为我图片量不大。
+图床神器 iPic在选择好图床后，还发现一个超级好用的软件——
+
+总之就是搭配Markdown的神器啦。
+
+支持拖动上传
+自动生成Markdown语法，插图方">
+<meta property="og:image" content="https://i.v2ex.co/933WxxrL.jpeg">
+<meta property="og:image" content="https://i.v2ex.co/dNQ05ykt.gif">
+<meta property="og:updated_time" content="2017-01-07T06:04:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Hexo博客弄一个图床，再搭配一个神器">
-<meta name="twitter:description" content="首先因为Hexo管理图片有些费劲，而且还吃流量，毕竟图床的流量要便宜点。。。
-其次是这样书写的时候，无论在本地的Markdown编辑器，还是网站，亦或是扔到Quiver这类的笔记本里，看图都是简单明了的。
-图床这个没什么说的了，选择很多，教程也很多，只不过七牛要备案呐。
-新浪的也很好，不过自己买的图床管理方便些。
-所以挑了挑我选了阿里云对象存储OSS，不过绑定域名的话，这个域名要备案的，所以我没绑">
-<meta name="twitter:image" content="http://dvel.oss-cn-beijing.aliyuncs.com/2016-11-27-190538.jpg">
+<meta name="twitter:description" content="图床的优点：一次上传，到处使用。
+Markdown编辑器、自己的博客、论坛、Quiver这类的笔记本里，看图都是简单明了的。
+图床七牛、又拍、阿里云
+新浪、imgur、sm.ms
+很多随便选，按需求决定，我用的V2EX的，因为我图片量不大。
+图床神器 iPic在选择好图床后，还发现一个超级好用的软件——
+
+总之就是搭配Markdown的神器啦。
+
+支持拖动上传
+自动生成Markdown语法，插图方">
+<meta name="twitter:image" content="https://i.v2ex.co/933WxxrL.jpeg">
 
 
 
@@ -349,13 +367,13 @@
       
 
       
-        <p>首先因为Hexo管理图片有些费劲，而且还吃流量，毕竟图床的流量要便宜点。。。</p>
-<p>其次是这样书写的时候，无论在本地的Markdown编辑器，还是网站，亦或是扔到Quiver这类的笔记本里，看图都是简单明了的。</p>
-<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>这个没什么说的了，选择很多，教程也很多，只不过七牛要备案呐。</p>
-<p>新浪的也很好，不过自己买的图床管理方便些。</p>
-<p>所以挑了挑我选了阿里云对象存储OSS，不过绑定域名的话，这个域名要备案的，所以我没绑。。。</p>
-<p>在选择好图床后，还发现一个超级好用的软件——</p>
-<h2 id="图床神器-iPic"><a href="#图床神器-iPic" class="headerlink" title="图床神器 iPic"></a>图床神器 iPic</h2><p><img src="http://dvel.oss-cn-beijing.aliyuncs.com/2016-11-27-190538.jpg" alt="iPic"></p>
+        <p>图床的优点：一次上传，到处使用。</p>
+<p>Markdown编辑器、自己的博客、论坛、Quiver这类的笔记本里，看图都是简单明了的。</p>
+<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>七牛、又拍、阿里云</p>
+<p>新浪、imgur、sm.ms</p>
+<p>很多随便选，按需求决定，我用的V2EX的，因为我图片量不大。</p>
+<h2 id="图床神器-iPic"><a href="#图床神器-iPic" class="headerlink" title="图床神器 iPic"></a>图床神器 iPic</h2><p>在选择好图床后，还发现一个超级好用的软件——</p>
+<p><img src="https://i.v2ex.co/933WxxrL.jpeg" alt="iPic"></p>
 <p>总之就是搭配Markdown的神器啦。</p>
 <ul>
 <li>支持拖动上传</li>
@@ -365,7 +383,7 @@
 </ul>
 <p>具体的看这里吧：<a href="https://toolinbox.net/iPic/" rel="external nofollow noopener noreferrer" target="_blank"> 图床神器 iPic </a></p>
 <p><em>特效</em>，注意看地址：</p>
-<p><img src="http://dvel.oss-cn-beijing.aliyuncs.com/2016-11-27-65e4f1e6gw1f9yve3ycosg20ha0c0k3l.gif" alt="Typora iPic"></p>
+<p><img src="https://i.v2ex.co/dNQ05ykt.gif" alt="Typora iPic"></p>
 
       
     </div>
