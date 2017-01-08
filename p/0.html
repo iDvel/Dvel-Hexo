@@ -96,7 +96,7 @@ tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能�
 <meta property="og:description" content="因为之前的WordPress博客被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
 主要还是记录了自己的搭建过程，因为对Linux不太熟悉，以备忘为主。
 tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示Host key verification failed.。运行此命令即可：$ ssh-keygen -R 123.123.123.123，将123.123.">
-<meta property="og:updated_time" content="2017-01-07T15:01:46.000Z">
+<meta property="og:updated_time" content="2017-01-08T05:48:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好, Hexo!">
 <meta name="twitter:description" content="因为之前的WordPress博客被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
@@ -352,7 +352,7 @@ tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能�
 <p>之后在本地目录<code>~/.ssh/</code>下可以看到私钥<code>id_rsa</code>和公钥<code>id_rsa.pub</code>已经生成。</p>
 <p>安装ssh-copy-id等会用，方便上传公钥。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">brew install ssh-copy-id</div></pre></td></tr></table></figure></p>
 <h3 id="VPS端搭建"><a href="#VPS端搭建" class="headerlink" title="VPS端搭建"></a>VPS端搭建</h3><h4 id="更新与安装"><a href="#更新与安装" class="headerlink" title="更新与安装"></a>更新与安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">yum update</div><div class="line">yum install nginx -y</div><div class="line">yum install git-core</div></pre></td></tr></table></figure>
-<h4 id="创建git用户及设置ssh免密码登陆"><a href="#创建git用户及设置ssh免密码登陆" class="headerlink" title="创建git用户及设置ssh免密码登陆"></a>创建git用户及设置ssh免密码登陆</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">adduser git</div><div class="line">passwd git</div><div class="line">chmod 740 /etc/sudoers</div><div class="line">vim /etc/sudoers</div></pre></td></tr></table></figure>
+<h4 id="创建git用户及设置ssh免密码登陆"><a href="#创建git用户及设置ssh免密码登陆" class="headerlink" title="创建git用户及设置ssh免密码登陆"></a>创建git用户及设置ssh免密码登陆</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">adduser git</div><div class="line">passwd git</div><div class="line">chmod 740 /etc/sudoers</div><div class="line">vim /etc/sudoers</div><div class="line">(提示没有安装vim的可以用vi命令，或安装vim:)</div><div class="line">yum -y install vim*</div></pre></td></tr></table></figure>
 <p>在编辑器中找到以下内容并添加一行：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">## Allow root to run any commands anywhere</div><div class="line">root    ALL=(ALL)     ALL</div><div class="line">git     ALL=(ALL)     ALL (这行是添加的)</div></pre></td></tr></table></figure>
 <p>保存退出并执行：</p>
