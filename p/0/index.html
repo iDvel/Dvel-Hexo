@@ -86,22 +86,28 @@
 
 
 
-<meta name="description" content="因为之前的WordPress博客被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
+<meta name="description" content="updated: 2017-01-18
+因为之前的WordPress博客域名被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
 主要还是记录了自己的搭建过程，因为对Linux不太熟悉，以备忘为主。
-tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示Host key verification failed.。运行此命令即可：$ ssh-keygen -R 123.123.123.123，将123.123.">
+后面换到了coding pages上搭建，主要是简单方便省心，自带了https，速度也凑合。
+tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示Host key v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你好, Hexo!">
 <meta property="og:url" content="https://Dvel.org/p/0/index.html">
 <meta property="og:site_name" content="Dvel's Blog">
-<meta property="og:description" content="因为之前的WordPress博客被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
+<meta property="og:description" content="updated: 2017-01-18
+因为之前的WordPress博客域名被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
 主要还是记录了自己的搭建过程，因为对Linux不太熟悉，以备忘为主。
-tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示Host key verification failed.。运行此命令即可：$ ssh-keygen -R 123.123.123.123，将123.123.">
-<meta property="og:updated_time" content="2017-01-08T05:48:01.000Z">
+后面换到了coding pages上搭建，主要是简单方便省心，自带了https，速度也凑合。
+tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示Host key v">
+<meta property="og:updated_time" content="2017-01-17T18:34:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好, Hexo!">
-<meta name="twitter:description" content="因为之前的WordPress博客被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
+<meta name="twitter:description" content="updated: 2017-01-18
+因为之前的WordPress博客域名被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。
 主要还是记录了自己的搭建过程，因为对Linux不太熟悉，以备忘为主。
-tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示Host key verification failed.。运行此命令即可：$ ssh-keygen -R 123.123.123.123，将123.123.">
+后面换到了coding pages上搭建，主要是简单方便省心，自带了https，速度也凑合。
+tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示Host key v">
 
 
 
@@ -340,10 +346,12 @@ tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能�
       
 
       
-        <p>因为之前的WordPress博客被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。</p>
+        <p>updated: 2017-01-18</p>
+<p>因为之前的WordPress博客域名被墙，加上Hexo正好满足于简单的书写要求，所以更换为Hexo。</p>
 <p>主要还是记录了自己的搭建过程，因为对Linux不太熟悉，以备忘为主。</p>
+<p>后面换到了coding pages上搭建，主要是简单方便省心，自带了https，速度也凑合。</p>
 <h2 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h2><p>如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能会提示<code>Host key verification failed.</code>。<br>运行此命令即可：<code>$ ssh-keygen -R 123.123.123.123</code>，将123.123.123.123改成你的VPS的IP。<br>或者简单粗暴直接删除<code>known_hosts</code>文件。</p>
-<h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><h3 id="本地搭建"><a href="#本地搭建" class="headerlink" title="本地搭建"></a>本地搭建</h3><h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ brew install node</div></pre></td></tr></table></figure>
+<h1 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h1><h3 id="本地搭建"><a href="#本地搭建" class="headerlink" title="本地搭建"></a>本地搭建</h3><h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ brew install node</div></pre></td></tr></table></figure>
 <h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>先cd进入创建好的hexo目录：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ sudo npm install -g hexo-cli</div><div class="line">$ hexo init</div><div class="line">$ npm install</div><div class="line">$ hexo d -fg</div><div class="line">$ hexo serve</div></pre></td></tr></table></figure>
 <p>打开<a href="http://localhost:4000如果看到hexo的初始页面证明安装成功。" rel="external nofollow noopener noreferrer" target="_blank">http://localhost:4000如果看到hexo的初始页面证明安装成功。</a></p>
@@ -351,7 +359,7 @@ tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能�
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;email@example.com&quot;</div></pre></td></tr></table></figure>
 <p>之后在本地目录<code>~/.ssh/</code>下可以看到私钥<code>id_rsa</code>和公钥<code>id_rsa.pub</code>已经生成。</p>
 <p>安装ssh-copy-id等会用，方便上传公钥。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">brew install ssh-copy-id</div></pre></td></tr></table></figure></p>
-<h3 id="VPS端搭建"><a href="#VPS端搭建" class="headerlink" title="VPS端搭建"></a>VPS端搭建</h3><h4 id="更新与安装"><a href="#更新与安装" class="headerlink" title="更新与安装"></a>更新与安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">yum update</div><div class="line">yum install nginx -y</div><div class="line">yum install git-core</div></pre></td></tr></table></figure>
+<h3 id="VPS端搭建"><a href="#VPS端搭建" class="headerlink" title="VPS端搭建"></a>VPS端搭建</h3><h4 id="更新与安装（centOS）"><a href="#更新与安装（centOS）" class="headerlink" title="更新与安装（centOS）"></a>更新与安装（centOS）</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">yum update</div><div class="line">yum install nginx -y</div><div class="line">yum install git-core</div></pre></td></tr></table></figure>
 <h4 id="创建git用户及设置ssh免密码登陆"><a href="#创建git用户及设置ssh免密码登陆" class="headerlink" title="创建git用户及设置ssh免密码登陆"></a>创建git用户及设置ssh免密码登陆</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">adduser git</div><div class="line">passwd git</div><div class="line">chmod 740 /etc/sudoers</div><div class="line">vim /etc/sudoers</div><div class="line">(提示没有安装vim的可以用vi命令，或安装vim:)</div><div class="line">yum -y install vim*</div></pre></td></tr></table></figure>
 <p>在编辑器中找到以下内容并添加一行：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">## Allow root to run any commands anywhere</div><div class="line">root    ALL=(ALL)     ALL</div><div class="line">git     ALL=(ALL)     ALL (这行是添加的)</div></pre></td></tr></table></figure>
@@ -375,7 +383,10 @@ tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能�
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen         80 ;</div><div class="line">    root /var/www/hexo;//这里可以改成你的网站目录地址，我将网站放在/var/www/hexo</div><div class="line">    server_name example.com www.example.com;//这里输入你的域名或IP地址</div><div class="line">    access_log  /var/log/nginx/hexo_access.log;</div><div class="line">    error_log   /var/log/nginx/hexo_error.log;</div><div class="line">    location ~* ^.+\.(ico|gif|jpg|jpeg|png)$ &#123;</div><div class="line">            root /var/www/hexo;</div><div class="line">            access_log   off;</div><div class="line">            expires      1d;</div><div class="line">    &#125;</div><div class="line">    location ~* ^.+\.(css|js|txt|xml|swf|wav)$ &#123;</div><div class="line">        root /var/www/hexo;</div><div class="line">        access_log   off;</div><div class="line">        expires      10m;</div><div class="line">    &#125;</div><div class="line">    location / &#123;</div><div class="line">        root /var/www/hexo;//这里可以改成你的网站目录地址，我将网站放在/var/www/hexo</div><div class="line">        if (-f $request_filename) &#123;</div><div class="line">            rewrite ^/(.*)$  /$1 break;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>然后重启nginx，此时刷新网页应该显示的是403。</p>
 <h3 id="本机的最后配置"><a href="#本机的最后配置" class="headerlink" title="本机的最后配置"></a>本机的最后配置</h3><p>位于<code>hexo</code>文件夹下，<code>_config.yml</code>,修改<code>deploy</code>选项，例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  message: update</div><div class="line">  repo: git@123.123.123.123:hexo.git,master</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  message: update  # 这个可以不写，会默认生成update日期</div><div class="line">  repo: git@123.123.123.123:hexo.git,master # 逗号后面写分支</div></pre></td></tr></table></figure>
+<p>部署到多个仓库可以这么写：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">deploy: </div><div class="line">  - type: git</div><div class="line">    repo: git@git.coding.net:Dvel/Dvel.git,master</div><div class="line">  - type: git</div><div class="line">    repo: git@github.com:iDvel/Dvel-Hexo.git,master</div></pre></td></tr></table></figure>
+<p>每次更新博客也可以让github上长点绿草了。。。</p>
 <p>接下来安装<strong>hexo-deployer-git</strong>，否则部署时会报这个错”<em>ERROR Deployer not found: git</em>“。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p>接着<code>$ hexo g &amp;&amp; hexo d</code>，如果一切正常，静态文件已经被成功的push到了blog的仓库里。</p>
@@ -385,15 +396,32 @@ tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能�
 <p><code>$ hexo deploy</code>是部署，我们这里选择了Git，Hexo还支持其他部署形式。</p>
 <p>所以每次写完文章，执行这两个命令后，就对网站完成了更新。</p>
 <p>简化操作就是：<code>$ hexo g &amp;&amp; hexo d</code> ，再简化就是<code>$ hexo d -g</code>，效果一样。</p>
-<h2 id="方法二，利用一键安装包"><a href="#方法二，利用一键安装包" class="headerlink" title="方法二，利用一键安装包"></a>方法二，利用一键安装包</h2><p>因为不太熟悉Linux，所以我选择了一键安装包，管理方便些，还自带了SS。</p>
+<h1 id="方法二，利用一键安装包"><a href="#方法二，利用一键安装包" class="headerlink" title="方法二，利用一键安装包"></a>方法二，利用一键安装包</h1><p>因为不太熟悉Linux，所以我选择了一键安装包，多站点管理方便些。</p>
 <p>我用的这个 -&gt; <a href="https://oneinstack.com/" rel="external nofollow noopener noreferrer" target="_blank">OneinStack官网</a></p>
-<p>步骤和上面差不多，文件夹路径注意改一下就好，也可以很简单的搭建出Hexo。</p>
-<h2 id="编写文章、更新博客"><a href="#编写文章、更新博客" class="headerlink" title="编写文章、更新博客"></a>编写文章、更新博客</h2><p>使用一款 MarkDown 编辑器写文章 。写完后将文件以 *.md 的格式保存在本地<code>[网站目录]\source_posts</code>中。</p>
+<p>步骤和上面差不多，但是很多路径要改一下，也可以很简单的搭建出Hexo。</p>
+<h1 id="方法三，coding-pages"><a href="#方法三，coding-pages" class="headerlink" title="方法三，coding pages"></a>方法三，coding pages</h1><ol>
+<li><p>coding中创建项目</p>
+</li>
+<li><p>站点配置文件<code>_config.yml</code>中<code>deploy</code>中写好coding项目的git地址</p>
+</li>
+<li><p>push上去：<code>$ hexo d -g</code></p>
+</li>
+<li><p>在coding上你的项目，开启Pages服务：可以自定义分支，绑定域名，开启https</p>
+</li>
+<li><p>大功告成</p>
+<p>​</p>
+</li>
+</ol>
+<p>这个相对简单一些，Coding Pages服务目前提供100M空间的支持，一般来说没有写文章的话，生成的<code>public</code>文件夹大约小于5M。</p>
+<p>100M基本够写很多年的博客，至于图片应该另寻图床，不要放到coding上，否则空间很快用完。</p>
+<h1 id="编写文章、更新博客"><a href="#编写文章、更新博客" class="headerlink" title="编写文章、更新博客"></a>编写文章、更新博客</h1><p>使用一款 MarkDown 编辑器写文章 ，写完后将文件以 *.md 的格式保存在本地<code>[网站目录]\source_posts</code>中。</p>
+<p>MD编辑器，强烈安利Typora。</p>
 <p>每篇 Blog 都有固定的参数必须填写，参数如下，注意每个参数的 : 后都有一个空格。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">title: title</div><div class="line">date: yyyy-mm-dd</div><div class="line">categories: category  </div><div class="line">tags: tag</div><div class="line">#多标签请这样写：  </div><div class="line">#tags: [tag1,tag2,tag3]</div><div class="line">#或者这样写： </div><div class="line">#tags:</div><div class="line">#- tag1 </div><div class="line">#- tag2  </div><div class="line">#- tag3  </div><div class="line">---  </div><div class="line">正文</div></pre></td></tr></table></figure>
+<p>或者使用<code>$ hexo new</code>命令，具体官网有详细说明。</p>
 <p>编写完后，只需要在hexo文件夹下执行<code>hexo g &amp;&amp; hexo d</code>，博客即可更新。</p>
-<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><h4 id="设置了ssh免密码登陆后，依然需要密码"><a href="#设置了ssh免密码登陆后，依然需要密码" class="headerlink" title="设置了ssh免密码登陆后，依然需要密码"></a>设置了ssh免密码登陆后，依然需要密码</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">这整段是以前使用的方法，过时了。。。</div><div class="line">adduser git</div><div class="line">chmod 740 /etc/sudoers</div><div class="line">vim /etc/sudoers</div><div class="line">找到如下内容:</div><div class="line"></div><div class="line">## Allow root to run any commands anywhere</div><div class="line">root    ALL=(ALL)     ALL</div><div class="line"></div><div class="line">在下面添加一行:</div><div class="line">git   ALL=(ALL)     ALL</div><div class="line"></div><div class="line">保存并退出后执行:</div><div class="line">chmod 440 /etc/sudoers</div><div class="line"></div><div class="line">设置ssh免密码登陆：</div><div class="line">su git</div><div class="line">cd ~</div><div class="line">mkdir .ssh &amp;&amp; cd .ssh</div><div class="line">touch authorized_keys</div><div class="line">vim authorized_keys  //在这个文件中粘贴进刚刚申请的key（在id_rsa.pub文件中）</div><div class="line">设置权限：</div><div class="line">chmod o-w ~/</div><div class="line">chmod 700 ~/.ssh</div><div class="line">chmod 600 ~/.ssh/authorized_keys</div><div class="line"></div><div class="line">测试免密码登陆</div><div class="line">ssh -vvT git@123.123.123.123   // 你的VPS的IP地址</div><div class="line">发现依然需要密码，搜了好几天没找到解决办法，后来采用了ssh-copy-id，解决了这个问题。</div></pre></td></tr></table></figure>
-<h2 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h2><ul>
+<h1 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h1><h4 id="设置了ssh免密码登陆后，依然需要密码"><a href="#设置了ssh免密码登陆后，依然需要密码" class="headerlink" title="设置了ssh免密码登陆后，依然需要密码"></a>设置了ssh免密码登陆后，依然需要密码</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">这整段是以前使用的方法，过时了。。。</div><div class="line">设置ssh免密码登陆：</div><div class="line">su git</div><div class="line">cd ~</div><div class="line">mkdir .ssh &amp;&amp; cd .ssh</div><div class="line">touch authorized_keys</div><div class="line">vim authorized_keys  //在这个文件中粘贴进刚刚申请的key（在id_rsa.pub文件中）</div><div class="line">设置权限：</div><div class="line">chmod o-w ~/</div><div class="line">chmod 700 ~/.ssh</div><div class="line">chmod 600 ~/.ssh/authorized_keys</div><div class="line"></div><div class="line">测试免密码登陆</div><div class="line">ssh -vvT git@123.123.123.123   // 你的VPS的IP地址</div><div class="line">发现依然需要密码，搜了好几天没找到解决办法，后来采用了ssh-copy-id，解决了这个问题。</div></pre></td></tr></table></figure>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><ul>
 <li><a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo官网</a></li>
 <li><a href="http://tiktoking.github.io/2016/01/26/hexo/#u521B_u5EFA_u7F51_u7AD9_u76EE_u5F55" rel="external nofollow noopener noreferrer" target="_blank">在VPS上搭建hexo博客，利用git更新 - WikiLibrary</a></li>
 <li><a href="http://buzhidao.me/2016/02/01/%E5%9C%A8VPS%E4%B8%8A%E9%85%8D%E7%BD%AEhexo%E5%8D%9A%E5%AE%A2/" rel="external nofollow noopener noreferrer" target="_blank">在VPS上配置hexo博客 - Springwon</a></li>
@@ -660,7 +688,7 @@ tip如果过程中重新初始化过VPS的磁盘，ssh连接VPS的时候可能�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip"><span class="nav-number">1.</span> <span class="nav-text">tip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一："><span class="nav-number">2.</span> <span class="nav-text">方法一：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地搭建"><span class="nav-number">2.1.</span> <span class="nav-text">本地搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装node-js"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.1.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ssh秘钥"><span class="nav-number">2.1.3.</span> <span class="nav-text">ssh秘钥</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPS端搭建"><span class="nav-number">2.2.</span> <span class="nav-text">VPS端搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#更新与安装"><span class="nav-number">2.2.1.</span> <span class="nav-text">更新与安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建git用户及设置ssh免密码登陆"><span class="nav-number">2.2.2.</span> <span class="nav-text">创建git用户及设置ssh免密码登陆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回到VPS，创建git仓库"><span class="nav-number">2.2.3.</span> <span class="nav-text">回到VPS，创建git仓库:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建网站目录并赋予git对网站目录的所有权"><span class="nav-number">2.2.4.</span> <span class="nav-text">创建网站目录并赋予git对网站目录的所有权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置git-hooks"><span class="nav-number">2.2.5.</span> <span class="nav-text">配置git hooks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置Nginx"><span class="nav-number">2.2.6.</span> <span class="nav-text">配置Nginx</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本机的最后配置"><span class="nav-number">2.3.</span> <span class="nav-text">本机的最后配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二，利用一键安装包"><span class="nav-number">3.</span> <span class="nav-text">方法二，利用一键安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写文章、更新博客"><span class="nav-number">4.</span> <span class="nav-text">编写文章、更新博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的坑"><span class="nav-number">5.</span> <span class="nav-text">遇到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置了ssh免密码登陆后，依然需要密码"><span class="nav-number">5.0.1.</span> <span class="nav-text">设置了ssh免密码登陆后，依然需要密码</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#参考-amp-感谢"><span class="nav-number">6.</span> <span class="nav-text">参考&感谢</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip"><span class="nav-number">1.</span> <span class="nav-text">tip</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#方法一："><span class="nav-number"></span> <span class="nav-text">方法一：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地搭建"><span class="nav-number">0.1.</span> <span class="nav-text">本地搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装node-js"><span class="nav-number">0.1.1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">0.1.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ssh秘钥"><span class="nav-number">0.1.3.</span> <span class="nav-text">ssh秘钥</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPS端搭建"><span class="nav-number">0.2.</span> <span class="nav-text">VPS端搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#更新与安装（centOS）"><span class="nav-number">0.2.1.</span> <span class="nav-text">更新与安装（centOS）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建git用户及设置ssh免密码登陆"><span class="nav-number">0.2.2.</span> <span class="nav-text">创建git用户及设置ssh免密码登陆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回到VPS，创建git仓库"><span class="nav-number">0.2.3.</span> <span class="nav-text">回到VPS，创建git仓库:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建网站目录并赋予git对网站目录的所有权"><span class="nav-number">0.2.4.</span> <span class="nav-text">创建网站目录并赋予git对网站目录的所有权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置git-hooks"><span class="nav-number">0.2.5.</span> <span class="nav-text">配置git hooks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置Nginx"><span class="nav-number">0.2.6.</span> <span class="nav-text">配置Nginx</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本机的最后配置"><span class="nav-number">0.3.</span> <span class="nav-text">本机的最后配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法二，利用一键安装包"><span class="nav-number"></span> <span class="nav-text">方法二，利用一键安装包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法三，coding-pages"><span class="nav-number"></span> <span class="nav-text">方法三，coding pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编写文章、更新博客"><span class="nav-number"></span> <span class="nav-text">编写文章、更新博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#遇到的坑"><span class="nav-number"></span> <span class="nav-text">遇到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置了ssh免密码登陆后，依然需要密码"><span class="nav-number">0.0.1.</span> <span class="nav-text">设置了ssh免密码登陆后，依然需要密码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考-amp-感谢"><span class="nav-number"></span> <span class="nav-text">参考&感谢</span></a></li></div>
             
 
           </div>
