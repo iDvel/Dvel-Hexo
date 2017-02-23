@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://Dvel.org/"/>
-  <updated>2017-01-07T15:01:55.000Z</updated>
+  <updated>2017-02-23T14:27:29.000Z</updated>
   <id>https://Dvel.org/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitBook简单生成本地静态HTML的方法</title>
+    <link href="https://Dvel.org/p/2/"/>
+    <id>https://Dvel.org/p/2/</id>
+    <published>2017-02-23T14:23:27.000Z</published>
+    <updated>2017-02-23T14:27:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>偶尔可能要写一些生成本地文件发给朋友看，所以。。。</p>
+<h1 id="简单生成本地静态HTML的方法"><a href="#简单生成本地静态HTML的方法" class="headerlink" title="简单生成本地静态HTML的方法"></a>简单生成本地静态HTML的方法</h1><ul>
+<li>安装：<code>$ npm install gitbook-cli -g</code></li>
+</ul>
+<ul>
+<li>生成：<code>$ gitbook build</code></li>
+</ul>
+<ul>
+<li>结果：左侧目录无法点击。</li>
+</ul>
+<ul>
+<li><code>$ gitbook serve</code> 可通过localhost访问，没有任何问题。</li>
+</ul>
+<p><strong>问题：</strong></p>
+<p>自某版本后<code>$ gitbook build</code>生成的 website 不支持 local 打开了，具体哪个版本未实践。</p>
+<p><strong>解决办法：</strong></p>
+<p><code>$ gitbook build --gitbook=2.6.7</code></p>
+<p>使用2.6.7版本，会自动安装并生成，左侧目录可点击，Firefox、Chrome暂无任何问题。</p>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p><strong>帮助</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gitbook help</div></pre></td></tr></table></figure>
+<p><strong>更新</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gitbook update</div></pre></td></tr></table></figure>
+<p><strong>生成静态网页</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gitbook build</div><div class="line">$ gitbook build --gitbook=2.6.7 // 生成对应版本的，本地无此版本会自动下载</div></pre></td></tr></table></figure>
+<p><strong>生成静态网页并运行到服务器</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gitbook serve</div></pre></td></tr></table></figure>
+<p><strong>列出远程所有可用版本</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gitbook ls-remote</div></pre></td></tr></table></figure>
+<p><strong>列出本地所有已安装版本</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gitbook ls</div></pre></td></tr></table></figure>
+<p><strong>卸载本地某版本</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gitbook uninstall x.x.x</div></pre></td></tr></table></figure>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><p><a href="https://github.com/zhangjikai/gitbook-use" rel="external nofollow noopener noreferrer" target="_blank">hangjikai/gitbook-use</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;偶尔可能要写一些生成本地文件发给朋友看，所以。。。&lt;/p&gt;
+&lt;h1 id=&quot;简单生成本地静态HTML的方法&quot;&gt;&lt;a href=&quot;#简单生成本地静态HTML的方法&quot; class=&quot;headerlink&quot; title=&quot;简单生成本地静态HTML的方法&quot;&gt;&lt;/a&gt;简单生成本地静态
+    
+    </summary>
+    
+    
+      <category term="GitBook" scheme="https://Dvel.org/tags/GitBook/"/>
+    
+  </entry>
   
   <entry>
     <title>为Hexo博客弄一个图床，再搭配一个神器</title>
