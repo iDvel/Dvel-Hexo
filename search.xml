@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[一二三]]></title>
+      <url>%2Fp%2F6.785634562456456e%2B22%2F</url>
+      <content type="text"><![CDATA[456asdasdasd]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[GCE搭建SS]]></title>
       <url>%2Fp%2F3%2F</url>
       <content type="text"><![CDATA[GCE搭建SS目前是300美元、12月试用活动，所以来体验一下。 之前试用，选择了asia-east1-c区，发现速度并不理想，我本人是北京联通。 后来发现是IP坑爹，35开头的对我效果很不理想，开到了130或104开头的IP后ping基本在60以内。 信用卡国内部分双币卡无法验证。 后来在知乎上看有个哥们花5块钱淘宝买了张美国信用卡成功了。。。 GCE 注意防火墙是自动开启的，在『网络』 - 『防火墙规则』添加规则。 亲测秋水逸冰的一键BBR脚本在GCE的CentOS7中无法使用，重启后变成read-only file system，可以换Ubuntu，但是不换BBR速度也很快了。 然后推荐秋水逸冰的SS一键脚本]]></content>
