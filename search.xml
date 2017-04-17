@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[iOS使用CocoaPod的快速回顾]]></title>
+      <url>%2Fp%2F4%2F</url>
+      <content type="text"><![CDATA[安装Mac自带Ruby环境，查看： $ gem -v 通过surge等工具实现终端科学上网，或更改gem源。 安装 &amp; 更新 Pod： $ sudo gem install cocoapods 确认： $ pod --version 使用进入工程根目录，创建Podfile文件。 写入： platform :ios, &apos;8.0&apos;target &apos;svnt&apos; dopod &apos;AFNetworking&apos;, &apos;~&gt; 3.0&apos;end 即最低支持iOS 8，第三方框架AFN的版本为3.0。 cd进Podfile所在目录，进行安装第三方库： $ pod install 后续使用查询框架是否有新版本： $ pod outdated 更新框架： $ pod update 参考&amp;感谢 iOS开发 - CocoaPods安装和使用教程 CocoaPods相关问题总结]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[GCE搭建SS]]></title>
       <url>%2Fp%2F3%2F</url>
       <content type="text"><![CDATA[GCE搭建SS目前是300美元、12月试用活动，所以来体验一下。 之前试用，选择了asia-east1-c区，发现速度并不理想，我本人是北京联通。 后来发现是IP坑爹，35开头的对我效果很不理想，开到了130或104开头的IP后ping基本在60以内。 信用卡国内部分双币卡无法验证。 后来在知乎上看有个哥们花5块钱淘宝买了张美国信用卡成功了。。。 GCE 注意防火墙是自动开启的，在『网络』 - 『防火墙规则』添加规则。 亲测秋水逸冰的一键BBR脚本在GCE的CentOS7中无法使用，重启后变成read-only file system，可以换Ubuntu，但是不换BBR速度也很快了。 然后推荐秋水逸冰的SS一键脚本]]></content>
