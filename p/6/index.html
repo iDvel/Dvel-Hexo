@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="iOS,CocoaPod,">
+  <meta name="keywords" content="iOS,ScrollView,Masonry,">
 
 
 
@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="安装Mac自带Ruby环境，查看： $ gem -v 通过surge等工具实现终端科学上网，或更改gem源。 安装 &amp;amp; 更新 Pod： $ sudo gem install cocoapods 确认： $ pod --version 使用进入工程根目录，创建Podfile文件。 写入： platform :ios, &amp;apos;8.0&amp;apos;target &amp;apos;svnt&amp;apos">
-<meta name="keywords" content="iOS,CocoaPod">
+<meta name="description" content="昨天耽误了一阵子在scrollView的布局上，记录一下。 如果可以提前确定scrollView的contentSize，就简单多了，但这种情况很少。 一般还是按照subViews自适应的比较合适，这样就需要一个containerView来撑起scrollView的contentSize。 简单的代码示例：UIScrollView *scrollView = [UIScrollVie[self.v">
+<meta name="keywords" content="iOS,ScrollView,Masonry">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS使用CocoaPod的快速回顾">
-<meta property="og:url" content="https://Dvel.org/p/4/index.html">
+<meta property="og:title" content="UIScrollView中使用Masonry">
+<meta property="og:url" content="https://Dvel.org/p/6/index.html">
 <meta property="og:site_name" content="Dvel's Blog">
-<meta property="og:description" content="安装Mac自带Ruby环境，查看： $ gem -v 通过surge等工具实现终端科学上网，或更改gem源。 安装 &amp;amp; 更新 Pod： $ sudo gem install cocoapods 确认： $ pod --version 使用进入工程根目录，创建Podfile文件。 写入： platform :ios, &amp;apos;8.0&amp;apos;target &amp;apos;svnt&amp;apos">
-<meta property="og:updated_time" content="2017-04-17T09:58:14.000Z">
+<meta property="og:description" content="昨天耽误了一阵子在scrollView的布局上，记录一下。 如果可以提前确定scrollView的contentSize，就简单多了，但这种情况很少。 一般还是按照subViews自适应的比较合适，这样就需要一个containerView来撑起scrollView的contentSize。 简单的代码示例：UIScrollView *scrollView = [UIScrollVie[self.v">
+<meta property="og:updated_time" content="2017-04-25T06:03:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS使用CocoaPod的快速回顾">
-<meta name="twitter:description" content="安装Mac自带Ruby环境，查看： $ gem -v 通过surge等工具实现终端科学上网，或更改gem源。 安装 &amp;amp; 更新 Pod： $ sudo gem install cocoapods 确认： $ pod --version 使用进入工程根目录，创建Podfile文件。 写入： platform :ios, &amp;apos;8.0&amp;apos;target &amp;apos;svnt&amp;apos">
+<meta name="twitter:title" content="UIScrollView中使用Masonry">
+<meta name="twitter:description" content="昨天耽误了一阵子在scrollView的布局上，记录一下。 如果可以提前确定scrollView的contentSize，就简单多了，但这种情况很少。 一般还是按照subViews自适应的比较合适，这样就需要一个containerView来撑起scrollView的contentSize。 简单的代码示例：UIScrollView *scrollView = [UIScrollVie[self.v">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://Dvel.org/p/4/">
+  <link rel="canonical" href="https://Dvel.org/p/6/">
 
 
 
 
 
-  <title> iOS使用CocoaPod的快速回顾 | Dvel's Blog </title>
+  <title> UIScrollView中使用Masonry | Dvel's Blog </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +293,7 @@
   
 
   <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://Dvel.org/p/4/">
+    <link itemprop="mainEntityOfPage" href="https://Dvel.org/p/6/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dvel">
@@ -314,7 +314,7 @@
             
             
               
-                iOS使用CocoaPod的快速回顾
+                UIScrollView中使用Masonry
               
             
           </h2>
@@ -329,8 +329,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-17T16:45:51+08:00">
-                2017-04-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T13:12:11+08:00">
+                2017-04-25
               </time>
             
 
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-04-17T17:58:14+08:00">
-                2017-04-17
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-25T14:03:13+08:00">
+                2017-04-25
               </time>
             
           </span>
@@ -360,7 +360,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/p/4/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/p/6/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -392,27 +392,10 @@
       
 
       
-        <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Mac自带Ruby环境，查看：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ gem -v</div></pre></td></tr></table></figure>
-<p>通过surge等工具实现终端科学上网，或更改gem源。</p>
-<p>安装 &amp; 更新 Pod：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ sudo gem install cocoapods</div></pre></td></tr></table></figure>
-<p>确认：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ pod --version</div></pre></td></tr></table></figure>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>进入工程根目录，创建<code>Podfile</code>文件。</p>
-<p>写入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">target &apos;svnt&apos; do</div><div class="line">pod &apos;AFNetworking&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
-<p>即最低支持iOS 8，第三方框架AFN的版本为3.0。</p>
-<p><code>cd</code>进<code>Podfile</code>所在目录，进行安装第三方库：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ pod install</div></pre></td></tr></table></figure>
-<h1 id="后续使用"><a href="#后续使用" class="headerlink" title="后续使用"></a>后续使用</h1><p>查询框架是否有新版本：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ pod outdated</div></pre></td></tr></table></figure>
-<p>更新框架：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ pod update</div></pre></td></tr></table></figure>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><ul>
-<li><a href="http://www.jianshu.com/p/82d0ba43f8c3" rel="external nofollow noopener noreferrer" target="_blank">iOS开发 - CocoaPods安装和使用教程</a></li>
-<li><a href="http://www.jianshu.com/p/689368568cf7" rel="external nofollow noopener noreferrer" target="_blank">CocoaPods相关问题总结</a></li>
-</ul>
+        <p>昨天耽误了一阵子在scrollView的布局上，记录一下。</p>
+<p>如果可以提前确定<code>scrollView</code>的<code>contentSize</code>，就简单多了，但这种情况很少。</p>
+<p>一般还是按照<code>subViews</code>自适应的比较合适，这样就需要一个<code>containerView</code>来撑起<code>scrollView</code>的<code>contentSize</code>。</p>
+<h1 id="简单的代码示例："><a href="#简单的代码示例：" class="headerlink" title="简单的代码示例："></a>简单的代码示例：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">UIScrollView *scrollView = [UIScrollVie</div><div class="line">[self.view addSubview:scrollView];</div><div class="line">                            </div><div class="line">UIView *containerView = [UIView new];</div><div class="line">[scrollView addSubview:containerView];</div><div class="line">                            </div><div class="line">UIView *v1 = [UIView new];</div><div class="line">v1.backgroundColor = [UIColor redColor]</div><div class="line">[containerView addSubview:v1];</div><div class="line">                            </div><div class="line">UIView *v2 = [UIView new];</div><div class="line">v2.backgroundColor = [UIColor blueColor</div><div class="line">[containerView addSubview:v2];</div><div class="line">                </div><div class="line">/*</div><div class="line">如上，我想让v1、v2纵向排列，让scrollView可以上下滚动。</div><div class="line">*/</div><div class="line"></div><div class="line">// scrollView正常进行约束</div><div class="line">[scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.edges.equalTo(self.view);</div><div class="line">&#125;];</div><div class="line">                      </div><div class="line">// 容器视图</div><div class="line">[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.edges.width.equalTo(scrollView); // 试了发现这里好像必须要约束一下width</div><div class="line">&#125;];</div><div class="line">                      </div><div class="line">// v1、v2都放在容器里</div><div class="line">[v1 mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.top.left.right.equalTo(containerView);</div><div class="line">    make.height.equalTo(@400);</div><div class="line">&#125;];</div><div class="line">[v2 mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.top.equalTo(v1.mas_bottom);</div><div class="line">    make.left.right.equalTo(v1);</div><div class="line">    make.height.equalTo(@400);</div><div class="line">&#125;];</div><div class="line"></div><div class="line">// 这里需要补刀，来撑起contentSize</div><div class="line">[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.bottom.equalTo(v2);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -459,7 +442,9 @@
           
             <a href="/tags/iOS/" rel="tag"># iOS</a>
           
-            <a href="/tags/CocoaPod/" rel="tag"># CocoaPod</a>
+            <a href="/tags/ScrollView/" rel="tag"># ScrollView</a>
+          
+            <a href="/tags/Masonry/" rel="tag"># Masonry</a>
           
         </div>
       
@@ -472,18 +457,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/p/5/" rel="next" title="解决CocoaPod的类库import没有提示">
-                <i class="fa fa-chevron-left"></i> 解决CocoaPod的类库import没有提示
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/p/3/" rel="prev" title="GCE搭建SS">
-                GCE搭建SS <i class="fa fa-chevron-right"></i>
+              <a href="/p/5/" rel="prev" title="解决CocoaPod的类库import没有提示">
+                解决CocoaPod的类库import没有提示 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -670,7 +651,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后续使用"><span class="nav-number">3.</span> <span class="nav-text">后续使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考-amp-感谢"><span class="nav-number">4.</span> <span class="nav-text">参考&感谢</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单的代码示例："><span class="nav-number">1.</span> <span class="nav-text">简单的代码示例：</span></a></li></ol></div>
             
 
           </div>

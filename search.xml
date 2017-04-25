@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[UIScrollView中使用Masonry]]></title>
+      <url>%2Fp%2F6%2F</url>
+      <content type="text"><![CDATA[昨天耽误了一阵子在scrollView的布局上，记录一下。 如果可以提前确定scrollView的contentSize，就简单多了，但这种情况很少。 一般还是按照subViews自适应的比较合适，这样就需要一个containerView来撑起scrollView的contentSize。 简单的代码示例：UIScrollView *scrollView = [UIScrollVie[self.view addSubview:scrollView]; UIView *containerView = [UIView new];[scrollView addSubview:containerView]; UIView *v1 = [UIView new];v1.backgroundColor = [UIColor redColor][containerView addSubview:v1]; UIView *v2 = [UIView new];v2.backgroundColor = [UIColor blueColor[containerView addSubview:v2]; /*如上，我想让v1、v2纵向排列，让scrollView可以上下滚动。*/// scrollView正常进行约束[scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123; make.edges.equalTo(self.view);&#125;]; // 容器视图[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123; make.edges.width.equalTo(scrollView); // 试了发现这里好像必须要约束一下width&#125;]; // v1、v2都放在容器里[v1 mas_makeConstraints:^(MASConstraintMaker *make) &#123; make.top.left.right.equalTo(containerView); make.height.equalTo(@400);&#125;];[v2 mas_makeConstraints:^(MASConstraintMaker *make) &#123; make.top.equalTo(v1.mas_bottom); make.left.right.equalTo(v1); make.height.equalTo(@400);&#125;];// 这里需要补刀，来撑起contentSize[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123; make.bottom.equalTo(v2);&#125;];]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[解决CocoaPod的类库import没有提示]]></title>
       <url>%2Fp%2F5%2F</url>
       <content type="text"><![CDATA[网上搜了一些，添加$(PODS_ROOT)到 User Header Search Paths 就行了。 但是提示中会多出一些不想要的东西。 改成这个就好了： $(PODS_ROOT)/Headers/Public 图：]]></content>
