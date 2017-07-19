@@ -209,39 +209,6 @@
   </entry>
   
   <entry>
-    <title>GCE搭建SS</title>
-    <link href="https://Dvel.org/p/3/"/>
-    <id>https://Dvel.org/p/3/</id>
-    <published>2017-03-27T05:50:20.000Z</published>
-    <updated>2017-03-28T03:38:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="GCE搭建SS"><a href="#GCE搭建SS" class="headerlink" title="GCE搭建SS"></a>GCE搭建SS</h1><p>目前是300美元、12月试用活动，所以来体验一下。</p>
-<p>之前试用，选择了asia-east1-c区，发现速度并不理想，我本人是北京联通。</p>
-<p>后来发现是IP坑爹，35开头的对我效果很不理想，开到了130或104开头的IP后ping基本在60以内。</p>
-<h1 id="信用卡"><a href="#信用卡" class="headerlink" title="信用卡"></a>信用卡</h1><p>国内部分双币卡无法验证。</p>
-<p>后来在知乎上看有个哥们花5块钱淘宝买了张美国信用卡成功了。。。</p>
-<h1 id="GCE"><a href="#GCE" class="headerlink" title="GCE"></a>GCE</h1><ul>
-<li>注意防火墙是自动开启的，在『网络』 - 『防火墙规则』添加规则。</li>
-<li>亲测<a href="https://teddysun.com/489.html" rel="external nofollow noopener noreferrer" target="_blank">秋水逸冰的一键BBR脚本</a>在GCE的CentOS7中无法使用，重启后变成read-only file system，可以换Ubuntu，但是不换BBR速度也很快了。</li>
-<li>然后推荐秋水逸冰的<a href="https://teddysun.com/" rel="external nofollow noopener noreferrer" target="_blank">SS一键脚本</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;GCE搭建SS&quot;&gt;&lt;a href=&quot;#GCE搭建SS&quot; class=&quot;headerlink&quot; title=&quot;GCE搭建SS&quot;&gt;&lt;/a&gt;GCE搭建SS&lt;/h1&gt;&lt;p&gt;目前是300美元、12月试用活动，所以来体验一下。&lt;/p&gt;
-&lt;p&gt;之前试用，选择了asia-east
-    
-    </summary>
-    
-    
-      <category term="GCE" scheme="https://Dvel.org/tags/GCE/"/>
-    
-      <category term="SS" scheme="https://Dvel.org/tags/SS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>GitBook简单生成本地静态HTML的方法</title>
     <link href="https://Dvel.org/p/2/"/>
     <id>https://Dvel.org/p/2/</id>

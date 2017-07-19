@@ -31,13 +31,6 @@
 
     
     <entry>
-      <title><![CDATA[GCE搭建SS]]></title>
-      <url>%2Fp%2F3%2F</url>
-      <content type="text"><![CDATA[GCE搭建SS目前是300美元、12月试用活动，所以来体验一下。 之前试用，选择了asia-east1-c区，发现速度并不理想，我本人是北京联通。 后来发现是IP坑爹，35开头的对我效果很不理想，开到了130或104开头的IP后ping基本在60以内。 信用卡国内部分双币卡无法验证。 后来在知乎上看有个哥们花5块钱淘宝买了张美国信用卡成功了。。。 GCE 注意防火墙是自动开启的，在『网络』 - 『防火墙规则』添加规则。 亲测秋水逸冰的一键BBR脚本在GCE的CentOS7中无法使用，重启后变成read-only file system，可以换Ubuntu，但是不换BBR速度也很快了。 然后推荐秋水逸冰的SS一键脚本]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[GitBook简单生成本地静态HTML的方法]]></title>
       <url>%2Fp%2F2%2F</url>
       <content type="text"><![CDATA[偶尔可能要写一些生成本地文件发给朋友看，所以。。。 简单生成本地静态HTML的方法 安装：$ npm install gitbook-cli -g 生成：$ gitbook build 结果：左侧目录无法点击。 $ gitbook serve 可通过localhost访问，没有任何问题。 问题： 自某版本后$ gitbook build生成的 website 不支持 local 打开了，具体哪个版本未实践。 解决办法： $ gitbook build --gitbook=2.6.7 使用2.6.7版本，会自动安装并生成，左侧目录可点击，Firefox、Chrome暂无任何问题。 常用命令帮助 $ gitbook help 更新 $ gitbook update 生成静态网页 $ gitbook build$ gitbook build --gitbook=2.6.7 // 生成对应版本的，本地无此版本会自动下载 生成静态网页并运行到服务器 $ gitbook serve 列出远程所有可用版本 $ gitbook ls-remote 列出本地所有已安装版本 $ gitbook ls 卸载本地某版本 $ gitbook uninstall x.x.x 参考&amp;感谢hangjikai/gitbook-use]]></content>
