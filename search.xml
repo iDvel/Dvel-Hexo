@@ -38,13 +38,6 @@
 
     
     <entry>
-      <title><![CDATA[和谐]]></title>
-      <url>%2Fp%2F3%2F</url>
-      <content type="text"></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[GitBook简单生成本地静态HTML的方法]]></title>
       <url>%2Fp%2F2%2F</url>
       <content type="text"><![CDATA[偶尔可能要写一些生成本地文件发给朋友看，所以。。。 简单生成本地静态HTML的方法 安装：$ npm install gitbook-cli -g 生成：$ gitbook build 结果：左侧目录无法点击。 $ gitbook serve 可通过localhost访问，没有任何问题。 问题： 自某版本后$ gitbook build生成的 website 不支持 local 打开了，具体哪个版本未实践。 解决办法： $ gitbook build --gitbook=2.6.7 使用2.6.7版本，会自动安装并生成，左侧目录可点击，Firefox、Chrome暂无任何问题。 常用命令帮助 $ gitbook help 更新 $ gitbook update 生成静态网页 $ gitbook build$ gitbook build --gitbook=2.6.7 // 生成对应版本的，本地无此版本会自动下载 生成静态网页并运行到服务器 $ gitbook serve 列出远程所有可用版本 $ gitbook ls-remote 列出本地所有已安装版本 $ gitbook ls 卸载本地某版本 $ gitbook uninstall x.x.x 参考&amp;感谢hangjikai/gitbook-use]]></content>
