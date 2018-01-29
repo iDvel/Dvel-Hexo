@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://Dvel.org/"/>
-  <updated>2017-08-10T20:48:04.000Z</updated>
+  <updated>2018-01-29T23:06:31.868Z</updated>
   <id>https://Dvel.org/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iCloud的替换方案</title>
+    <link href="https://Dvel.org/p/9/"/>
+    <id>https://Dvel.org/p/9/</id>
+    <published>2018-01-29T22:40:15.000Z</published>
+    <updated>2018-01-29T23:06:31.868Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="首先是iCloud的应用范围："><a href="#首先是iCloud的应用范围：" class="headerlink" title="首先是iCloud的应用范围："></a>首先是iCloud的应用范围：</h1><ul>
+<li><strong>iCloud Drive</strong> [建议保留]</li>
+<li><strong>照片</strong> [Google Photo]</li>
+<li><strong>邮件</strong></li>
+<li><strong>通讯录</strong> [google]</li>
+<li><strong>日历</strong> [google]</li>
+<li><strong>提醒事项</strong> </li>
+<li><strong>Safari</strong></li>
+<li><strong>备忘录</strong> [google]</li>
+<li><strong>Siri</strong></li>
+<li><strong>钥匙串</strong></li>
+<li><strong>回到我的Mac</strong></li>
+<li><strong>查找我的Mac</strong> [建议保留]</li>
+</ul>
+<p><strong>iCloud Drive</strong> 建议保留，众多App有很多无关紧要的备份文件都得以保留，另外诸如surge或其它App和Mac之间配合的，走iCloud存储会更方便一点。</p>
+<p><strong>查找我的Mac</strong> 肯定最好是保留。</p>
+<p>其中<strong>通讯录、日历、备忘录</strong>都可以移至iOS所支持的互联网账户内，比如Google。</p>
+<p><strong>照片</strong>，相信iCloud迁移至国内后备份情况会有所好转，除此之外分备份方案也众多，如果不是照片大户，Google Photo的15G原始尺寸免费存储方案也够存N多年的照片了。</p>
+<h1 id="手机备份方案"><a href="#手机备份方案" class="headerlink" title="手机备份方案"></a>手机备份方案</h1><p>推荐 <a href="https://imazing.com/" rel="external nofollow noopener noreferrer" target="_blank">iMazing</a>。</p>
+<p>关键字：增量备份、Wifi自动备份、应用程序管理（可下载更新已购买但被下架的App）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;首先是iCloud的应用范围：&quot;&gt;&lt;a href=&quot;#首先是iCloud的应用范围：&quot; class=&quot;headerlink&quot; title=&quot;首先是iCloud的应用范围：&quot;&gt;&lt;/a&gt;首先是iCloud的应用范围：&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;iClo
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="https://Dvel.org/tags/iOS/"/>
+    
+      <category term="iCloud" scheme="https://Dvel.org/tags/iCloud/"/>
+    
+      <category term="Google Photo" scheme="https://Dvel.org/tags/Google-Photo/"/>
+    
+      <category term="iMazing" scheme="https://Dvel.org/tags/iMazing/"/>
+    
+  </entry>
   
   <entry>
     <title>秦皇岛暑期自驾的烦恼</title>
