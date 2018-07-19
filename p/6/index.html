@@ -94,8 +94,9 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="UIScrollView中使用Masonry">
 <meta property="og:url" content="https://Dvel.org/p/6/index.html">
-<meta property="og:site_name" content="Dvel's Blog">
+<meta property="og:site_name" content="Dvel&#39;s Blog">
 <meta property="og:description" content="昨天耽误了一阵子在scrollView的布局上，记录一下。 如果可以提前确定scrollView的contentSize，就简单多了，但这种情况很少。 一般还是按照subViews自适应的比较合适，这样就需要一个containerView来撑起scrollView的contentSize。 简单的代码示例：UIScrollView *scrollView = [UIScrollVie new];[">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-04-25T06:06:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UIScrollView中使用Masonry">
@@ -395,7 +396,7 @@
         <p>昨天耽误了一阵子在scrollView的布局上，记录一下。</p>
 <p>如果可以提前确定<code>scrollView</code>的<code>contentSize</code>，就简单多了，但这种情况很少。</p>
 <p>一般还是按照<code>subViews</code>自适应的比较合适，这样就需要一个<code>containerView</code>来撑起<code>scrollView</code>的<code>contentSize</code>。</p>
-<h1 id="简单的代码示例："><a href="#简单的代码示例：" class="headerlink" title="简单的代码示例："></a>简单的代码示例：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">UIScrollView *scrollView = [UIScrollVie new];</div><div class="line">[self.view addSubview:scrollView];</div><div class="line">                            </div><div class="line">UIView *containerView = [UIView new];</div><div class="line">[scrollView addSubview:containerView];</div><div class="line">                            </div><div class="line">UIView *v1 = [UIView new];</div><div class="line">v1.backgroundColor = [UIColor redColor];</div><div class="line">[containerView addSubview:v1];</div><div class="line">                            </div><div class="line">UIView *v2 = [UIView new];</div><div class="line">v2.backgroundColor = [UIColor blueColor];</div><div class="line">[containerView addSubview:v2];</div><div class="line">                </div><div class="line">/*</div><div class="line">如上，我想让v1、v2纵向排列，让scrollView可以上下滚动。</div><div class="line">*/</div><div class="line"></div><div class="line">// scrollView正常进行约束</div><div class="line">[scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.edges.equalTo(self.view);</div><div class="line">&#125;];</div><div class="line">                      </div><div class="line">// 容器视图</div><div class="line">[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.edges.width.equalTo(scrollView); // 试了发现这里好像必须要约束一下width</div><div class="line">&#125;];</div><div class="line">                      </div><div class="line">// v1、v2都放在容器里</div><div class="line">[v1 mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.top.left.right.equalTo(containerView);</div><div class="line">    make.height.equalTo(@400);</div><div class="line">&#125;];</div><div class="line">[v2 mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.top.equalTo(v1.mas_bottom);</div><div class="line">    make.left.right.equalTo(v1);</div><div class="line">    make.height.equalTo(@400);</div><div class="line">&#125;];</div><div class="line"></div><div class="line">// 这里需要补刀，来撑起contentSize</div><div class="line">[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">    make.bottom.equalTo(v2);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<h1 id="简单的代码示例："><a href="#简单的代码示例：" class="headerlink" title="简单的代码示例："></a>简单的代码示例：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UIScrollView *scrollView = [UIScrollVie new];</span><br><span class="line">[self.view addSubview:scrollView];</span><br><span class="line">                            </span><br><span class="line">UIView *containerView = [UIView new];</span><br><span class="line">[scrollView addSubview:containerView];</span><br><span class="line">                            </span><br><span class="line">UIView *v1 = [UIView new];</span><br><span class="line">v1.backgroundColor = [UIColor redColor];</span><br><span class="line">[containerView addSubview:v1];</span><br><span class="line">                            </span><br><span class="line">UIView *v2 = [UIView new];</span><br><span class="line">v2.backgroundColor = [UIColor blueColor];</span><br><span class="line">[containerView addSubview:v2];</span><br><span class="line">                </span><br><span class="line">/*</span><br><span class="line">如上，我想让v1、v2纵向排列，让scrollView可以上下滚动。</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">// scrollView正常进行约束</span><br><span class="line">[scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.edges.equalTo(self.view);</span><br><span class="line">&#125;];</span><br><span class="line">                      </span><br><span class="line">// 容器视图</span><br><span class="line">[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.edges.width.equalTo(scrollView); // 试了发现这里好像必须要约束一下width</span><br><span class="line">&#125;];</span><br><span class="line">                      </span><br><span class="line">// v1、v2都放在容器里</span><br><span class="line">[v1 mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.top.left.right.equalTo(containerView);</span><br><span class="line">    make.height.equalTo(@400);</span><br><span class="line">&#125;];</span><br><span class="line">[v2 mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.top.equalTo(v1.mas_bottom);</span><br><span class="line">    make.left.right.equalTo(v1);</span><br><span class="line">    make.height.equalTo(@400);</span><br><span class="line">&#125;];</span><br><span class="line"></span><br><span class="line">// 这里需要补刀，来撑起contentSize</span><br><span class="line">[containerView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.bottom.equalTo(v2);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -457,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/p/7/" rel="next" title="苹果公司开发者账号申请流程">
-                <i class="fa fa-chevron-left"></i> 苹果公司开发者账号申请流程
+              <a href="/p/5/" rel="next" title="解决CocoaPod的类库import没有提示">
+                <i class="fa fa-chevron-left"></i> 解决CocoaPod的类库import没有提示
               </a>
             
           </div>
@@ -467,8 +468,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/p/5/" rel="prev" title="解决CocoaPod的类库import没有提示">
-                解决CocoaPod的类库import没有提示 <i class="fa fa-chevron-right"></i>
+              <a href="/p/7/" rel="prev" title="苹果公司开发者账号申请流程">
+                苹果公司开发者账号申请流程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
